@@ -17,23 +17,21 @@
             overflow-y: auto;
             -webkit-overflow-scrolling: touch;
         }
-
         .card-container {
             width: 100%;
-            max-width: 750rpx;
+            max-width: 420px;
             min-height: 100vh;
             background-color: rgba(255, 255, 255, 0.95);
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border-radius: 40rpx;
+            border-radius: 24px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
             position: relative;
             margin: 20px auto;
         }
-
         .hero-banner {
-            min-height: 300px;
+            min-height: 180px;
             background: linear-gradient(rgba(255, 182, 193, 0.3), rgba(255, 182, 193, 0.1));
             position: relative;
             display: flex;
@@ -42,540 +40,33 @@
             align-items: center;
             color: #d81b60;
             text-align: center;
-            padding: 40px;
+            padding: 32px 10px 20px 10px;
         }
-
         .hero-banner h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 2.2em;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
             animation: fadeInDown 1s ease-out;
+            letter-spacing: 0.2em;
         }
-
         .hero-banner .subtitle {
-            font-size: 1.2em;
+            font-size: 1em;
             margin-top: 10px;
             color: #e91e63;
             animation: fadeInUp 1s ease-out;
         }
-
-        .message-content {
-            padding: 25px;
-            flex-grow: 1;
-            line-height: 1.8;
-            font-size: 1.1em;
-            color: #333;
-            background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.95) 100%);
-        }
-
-        .message-content .greeting {
-            font-weight: bold;
-            font-size: 1.3em;
-            margin-bottom: 15px;
-            color: #d81b60;
-        }
-
-        .message-content .main-text p {
-            margin-bottom: 15px;
-            opacity: 0;
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-
-        .message-content .main-text p:nth-child(1) { animation-delay: 0.2s; }
-        .message-content .main-text p:nth-child(2) { animation-delay: 0.4s; }
-
-        .decorative-element {
-            height: 40px;
-            margin: 10px 25px;
-            background: linear-gradient(90deg, transparent, #ffb6c1, transparent);
-            opacity: 0.5;
-        }
-
-        .closing-remarks {
-            padding: 20px 25px;
-            text-align: right;
-            font-style: italic;
-            color: #555;
-            animation: fadeIn 1s ease-out;
-        }
-
-        .closing-remarks .signature {
-            font-weight: bold;
-            font-size: 1.4em;
-            color: #d81b60;
-            animation: writeSignature 1.5s ease-out forwards;
-        }
-
-        .interactive-cta {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .surprise-btn {
-            background: linear-gradient(45deg, #ff8fab, #ff7096);
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 25px;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        .surprise-btn:active {
-            transform: scale(0.98);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-
-        .footer-credit {
-            text-align: center;
-            padding: 15px;
-            font-size: 0.8em;
-            color: #aaa;
-            background-color: #f9f9f9;
-        }
-
-        .floating-hearts {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1000;
-        }
-
-        .heart {
-            position: absolute;
-            font-size: 20px;
-            animation: float 6s ease-in infinite;
-            opacity: 0;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes fadeInDown {
-            from { transform: translateY(-20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        @keyframes fadeInUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        @keyframes writeSignature {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-
-        @keyframes float {
-            0% { transform: translateY(100vh) scale(0); opacity: 0; }
-            50% { opacity: 0.8; }
-            100% { transform: translateY(-100px) scale(1); opacity: 0; }
-        }
-
-        /* 适配微信浏览器 */
-        ::-webkit-scrollbar {
-            display: none;
-        }
-    </style>
-</head>
-<body>
-    <div class="card-container">
-        <section class="hero-banner">
-            <h1>母亲节快乐</h1>
-            <p class="subtitle">To The World's Best Mom</p>
-        </section>
-
-        <section class="message-content">
-            <p class="greeting">亲爱的妈妈，</p>
-            <div class="main-text">
-                <p>在这个特别的日子里，我想对您说声感谢。感谢您无尽的爱、支持和鼓励。您是我生命中最温暖的阳光，是我永远的港湾。</p>
-                <p>愿时光温柔待您，愿您永远健康快乐，笑容灿烂如花！</p>
-            </div>
-        </section>
-
-        <div class="decorative-element"></div>
-
-        <section class="closing-remarks">
-            <p>爱您的，</p>
-            <p class="signature">李宣燃</p>
-        </section>
-
-        <section class="interactive-cta">
-            <button onclick="playMothersDayAnimation()" class="surprise-btn">点我查看惊喜！</button>
-        </section>
-
-        <footer class="footer-credit">
-            <p>用爱制作 ❤️ 2025</p>
-        </footer>
-    </div>
-
-    <div class="floating-hearts" id="floating-hearts"></div>
-
-    <script>
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.className = 'heart';
-            heart.innerHTML = '❤️';
-            heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
-            return heart;
-        }
-
-        function playMothersDayAnimation() {
-            const container = document.getElementById('floating-hearts');
-            const button = document.querySelector('.surprise-btn');
-            
-            // 创建多个心形
-            for (let i = 0; i < 20; i++) {
-                const heart = createHeart();
-                container.appendChild(heart);
-                setTimeout(() => {
-                    heart.remove();
-                }, 6000);
-            }
-
-            // 更新按钮状态
-            button.textContent = '💖 已收到您的爱 💖';
-            button.disabled = true;
-            button.style.background = 'linear-gradient(45deg, #ffb6c1, #ffc0cb)';
-        }
-
-        // 页面加载时的动画
-        window.addEventListener('load', () => {
-            const elements = document.querySelectorAll('.message-content, .closing-remarks');
-            elements.forEach(el => {
-                el.style.opacity = '0';
-                setTimeout(() => {
-                    el.style.opacity = '1';
-                }, 500);
-            });
-        });
-    </script>
-</body>
-</html>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background: linear-gradient(135deg, #ffe5e5, #fff0f5);
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .card-container {
-            width: 100%;
-            max-width: 750rpx;
-            min-height: 100vh;
-            background-color: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border-radius: 40rpx;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            margin: 20px auto;
-        }
-
-        .hero-banner {
-            min-height: 300px;
-            background: linear-gradient(rgba(255, 182, 193, 0.3), rgba(255, 182, 193, 0.1));
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: #d81b60;
-            text-align: center;
-            padding: 40px;
-        }
-
-        .hero-banner h1 {
-            margin: 0;
-            font-size: 2.5em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-            animation: fadeInDown 1s ease-out;
-        }
-
-        .hero-banner .subtitle {
-            font-size: 1.2em;
-            margin-top: 10px;
-            color: #e91e63;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .message-content {
-            padding: 25px;
-            flex-grow: 1;
-            line-height: 1.8;
-            font-size: 1.1em;
-            color: #333;
-            background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.95) 100%);
-        }
-
-        .message-content .greeting {
-            font-weight: bold;
-            font-size: 1.3em;
-            margin-bottom: 15px;
-            color: #d81b60;
-        }
-
-        .message-content .main-text p {
-            margin-bottom: 15px;
-            opacity: 0;
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-
-        .message-content .main-text p:nth-child(1) { animation-delay: 0.2s; }
-        .message-content .main-text p:nth-child(2) { animation-delay: 0.4s; }
-
-        .decorative-element {
-            height: 40px;
-            margin: 10px 25px;
-            background: linear-gradient(90deg, transparent, #ffb6c1, transparent);
-            opacity: 0.5;
-        }
-
-        .closing-remarks {
-            padding: 20px 25px;
-            text-align: right;
-            font-style: italic;
-            color: #555;
-            animation: fadeIn 1s ease-out;
-        }
-
-        .closing-remarks .signature {
-            font-weight: bold;
-            font-size: 1.4em;
-            color: #d81b60;
-            animation: writeSignature 1.5s ease-out forwards;
-        }
-
-        .interactive-cta {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .surprise-btn {
-            background: linear-gradient(45deg, #ff8fab, #ff7096);
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 25px;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        .surprise-btn:active {
-            transform: scale(0.98);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-
-        .footer-credit {
-            text-align: center;
-            padding: 15px;
-            font-size: 0.8em;
-            color: #aaa;
-            background-color: #f9f9f9;
-        }
-
-        .floating-hearts {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1000;
-        }
-
-        .heart {
-            position: absolute;
-            font-size: 20px;
-            animation: float 6s ease-in infinite;
-            opacity: 0;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes fadeInDown {
-            from { transform: translateY(-20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        @keyframes fadeInUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        @keyframes writeSignature {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-
-        @keyframes float {
-            0% { transform: translateY(100vh) scale(0); opacity: 0; }
-            50% { opacity: 0.8; }
-            100% { transform: translateY(-100px) scale(1); opacity: 0; }
-        }
-
-        /* 适配微信浏览器 */
-        ::-webkit-scrollbar {
-            display: none;
-        }
-    </style>
-</head>
-<body>
-    <!-- 顶部彩带动画 -->
-    <div class="ribbons">
-        <img class="ribbon" src="https://cdn.jsdelivr.net/gh/USBgz/xiaoxiao/assets/ribbon1.png" />
-        <img class="ribbon" src="https://cdn.jsdelivr.net/gh/USBgz/xiaoxiao/assets/ribbon2.png" />
-        <img class="ribbon" src="https://cdn.jsdelivr.net/gh/USBgz/xiaoxiao/assets/ribbon3.png" />
-        <img class="ribbon" src="https://cdn.jsdelivr.net/gh/USBgz/xiaoxiao/assets/ribbon4.png" />
-        <img class="ribbon" src="https://cdn.jsdelivr.net/gh/USBgz/xiaoxiao/assets/ribbon5.png" />
-    </div>
-    <div class="card-container">
-        <section class="hero-banner">
-            <h1>母亲节快乐</h1>
-            <p class="subtitle">To The World's Best Mom</p>
-        </section>
-
-        <!-- 新增祝福语 -->
-        <div class="blessings">
-            <span>愿妈妈永远健康美丽</span>
-            <span>幸福常伴身旁</span>
-            <span>笑口常开</span>
-            <span>心想事成</span>
-            <span>岁岁平安</span>
-            <span>母爱如春晖，温暖一生</span>
-        </div>
-
-        <section class="message-content">
-            <p class="greeting">亲爱的妈妈，</p>
-            <div class="main-text">
-                <p>在这个特别的日子里，我想对您说声感谢。感谢您无尽的爱、支持和鼓励。您是我生命中最温暖的阳光，是我永远的港湾。</p>
-                <p>愿时光温柔待您，愿您永远健康快乐，笑容灿烂如花！</p>
-                <p>无论我走多远，心中最柔软的地方永远属于您。祝妈妈节日快乐，天天开心！</p>
-            </div>
-        </section>
-
-        <div class="decorative-element"></div>
-
-        <section class="closing-remarks">
-            <p>爱您的，</p>
-            <p class="signature">李宣燃</p>
-        </section>
-
-        <section class="interactive-cta">
-            <button onclick="playMothersDayAnimation()" class="surprise-btn">点我查看惊喜！</button>
-        </section>
-
-        <footer class="footer-credit">
-            <p>用爱制作 ❤️ 2025</p>
-        </footer>
-    </div>
-    <!-- 底部气球动画（用emoji代替图片） -->
-    <div class="balloons">
-        <span class="balloon">🎈</span>
-        <span class="balloon">🎉</span>
-        <span class="balloon">🎈</span>
-        <span class="balloon">🎊</span>
-        <span class="balloon">🎈</span>
-    </div>
-    <div class="floating-hearts" id="floating-hearts"></div>
-
-    <script>
-        // ... existing code ...
-    </script>
-</body>
-</html>
-    <style>
-        /* 新增顶部彩带动画 */
-        .ribbons {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 60px;
-            pointer-events: none;
-            z-index: 1001;
-        }
-        .ribbon {
-            position: absolute;
-            width: 60px;
-            height: 60px;
-            opacity: 0.7;
-            animation: swing 2.5s infinite ease-in-out;
-        }
-        .ribbon:nth-child(1) { left: 10%; animation-delay: 0s; }
-        .ribbon:nth-child(2) { left: 30%; animation-delay: 0.5s; }
-        .ribbon:nth-child(3) { left: 50%; animation-delay: 1s; }
-        .ribbon:nth-child(4) { left: 70%; animation-delay: 1.5s; }
-        .ribbon:nth-child(5) { left: 90%; animation-delay: 2s; }
-        @keyframes swing {
-            0% { transform: rotate(-10deg) translateY(0);}
-            50% { transform: rotate(10deg) translateY(10px);}
-            100% { transform: rotate(-10deg) translateY(0);}
-        }
-
-        /* 新增底部气球动画 */
-        .balloons {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 120px;
-            pointer-events: none;
-            z-index: 1001;
-        }
-        .balloon {
-            position: absolute;
-            bottom: -80px;
-            font-size: 2.5em;
-            opacity: 0.8;
-            animation: fly 6s linear infinite;
-        }
-        .balloon:nth-child(1) { left: 15%; animation-delay: 0s; }
-        .balloon:nth-child(2) { left: 35%; animation-delay: 1s; }
-        .balloon:nth-child(3) { left: 55%; animation-delay: 2s; }
-        .balloon:nth-child(4) { left: 75%; animation-delay: 3s; }
-        .balloon:nth-child(5) { left: 85%; animation-delay: 4s; }
-        @keyframes fly {
-            0% { transform: translateY(0) scale(1);}
-            80% { opacity: 1;}
-            100% { transform: translateY(-180px) scale(1.1); opacity: 0;}
-        }
-        /* 祝福语动画 */
         .blessings {
-            margin: 20px 0 10px 0;
+            margin: 12px 0 8px 0;
             text-align: center;
             color: #e91e63;
-            font-size: 1.15em;
+            font-size: 1.05em;
             font-weight: bold;
             letter-spacing: 1px;
             animation: fadeIn 2s;
         }
         .blessings span {
             display: inline-block;
-            margin: 0 8px;
+            margin: 0 6px;
             animation: fadeInUp 1.2s;
         }
         .blessings span:nth-child(2) { animation-delay: 0.3s;}
@@ -583,242 +74,74 @@
         .blessings span:nth-child(4) { animation-delay: 0.9s;}
         .blessings span:nth-child(5) { animation-delay: 1.2s;}
         .blessings span:nth-child(6) { animation-delay: 1.5s;}
-    </style>
-</head>
-<body>
-    <!-- 顶部彩带动画 -->
-    <div class="ribbons">
-        <img class="ribbon" src="https://cdn.jsdelivr.net/gh/USBgz/xiaoxiao/assets/ribbon1.png" />
-        <img class="ribbon" src="https://cdn.jsdelivr.net/gh/USBgz/xiaoxiao/assets/ribbon2.png" />
-        <img class="ribbon" src="https://cdn.jsdelivr.net/gh/USBgz/xiaoxiao/assets/ribbon3.png" />
-        <img class="ribbon" src="https://cdn.jsdelivr.net/gh/USBgz/xiaoxiao/assets/ribbon4.png" />
-        <img class="ribbon" src="https://cdn.jsdelivr.net/gh/USBgz/xiaoxiao/assets/ribbon5.png" />
-    </div>
-    <div class="card-container">
-        <section class="hero-banner">
-            <h1>母亲节快乐</h1>
-            <p class="subtitle">To The World's Best Mom</p>
-        </section>
-
-        <!-- 新增祝福语 -->
-        <div class="blessings">
-            <span>愿妈妈永远健康美丽</span>
-            <span>幸福常伴身旁</span>
-            <span>笑口常开</span>
-            <span>心想事成</span>
-            <span>岁岁平安</span>
-            <span>母爱如春晖，温暖一生</span>
-        </div>
-
-        <section class="message-content">
-            <p class="greeting">亲爱的妈妈，</p>
-            <div class="main-text">
-                <p>在这个特别的日子里，我想对您说声感谢。感谢您无尽的爱、支持和鼓励。您是我生命中最温暖的阳光，是我永远的港湾。</p>
-                <p>愿时光温柔待您，愿您永远健康快乐，笑容灿烂如花！</p>
-                <p>无论我走多远，心中最柔软的地方永远属于您。祝妈妈节日快乐，天天开心！</p>
-            </div>
-        </section>
-
-        <div class="decorative-element"></div>
-
-        <section class="closing-remarks">
-            <p>爱您的，</p>
-            <p class="signature">李宣燃</p>
-        </section>
-
-        <section class="interactive-cta">
-            <button onclick="playMothersDayAnimation()" class="surprise-btn">点我查看惊喜！</button>
-        </section>
-
-        <footer class="footer-credit">
-            <p>用爱制作 ❤️ 2025</p>
-        </footer>
-    </div>
-    <!-- 底部气球动画（用emoji代替图片） -->
-    <div class="balloons">
-        <span class="balloon">🎈</span>
-        <span class="balloon">🎉</span>
-        <span class="balloon">🎈</span>
-        <span class="balloon">🎊</span>
-        <span class="balloon">🎈</span>
-    </div>
-    <div class="floating-hearts" id="floating-hearts"></div>
-
-    <script>
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.className = 'heart';
-            heart.innerHTML = '❤️';
-            heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
-            return heart;
-        }
-
-        function playMothersDayAnimation() {
-            const container = document.getElementById('floating-hearts');
-            const button = document.querySelector('.surprise-btn');
-            
-            // 创建多个心形
-            for (let i = 0; i < 20; i++) {
-                const heart = createHeart();
-                container.appendChild(heart);
-                setTimeout(() => {
-                    heart.remove();
-                }, 6000);
-            }
-
-            // 更新按钮状态
-            button.textContent = '💖 已收到您的爱 💖';
-            button.disabled = true;
-            button.style.background = 'linear-gradient(45deg, #ffb6c1, #ffc0cb)';
-        }
-
-        // 页面加载时的动画
-        window.addEventListener('load', () => {
-            const elements = document.querySelectorAll('.message-content, .closing-remarks');
-            elements.forEach(el => {
-                el.style.opacity = '0';
-                setTimeout(() => {
-                    el.style.opacity = '1';
-                }, 500);
-            });
-        });
-    </script>
-</body>
-</html>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background: linear-gradient(135deg, #ffe5e5, #fff0f5);
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .card-container {
-            width: 100%;
-            max-width: 750rpx;
-            min-height: 100vh;
-            background-color: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border-radius: 40rpx;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            margin: 20px auto;
-        }
-
-        .hero-banner {
-            min-height: 300px;
-            background: linear-gradient(rgba(255, 182, 193, 0.3), rgba(255, 182, 193, 0.1));
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: #d81b60;
-            text-align: center;
-            padding: 40px;
-        }
-
-        .hero-banner h1 {
-            margin: 0;
-            font-size: 2.5em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-            animation: fadeInDown 1s ease-out;
-        }
-
-        .hero-banner .subtitle {
-            font-size: 1.2em;
-            margin-top: 10px;
-            color: #e91e63;
-            animation: fadeInUp 1s ease-out;
-        }
-
         .message-content {
-            padding: 25px;
+            padding: 18px 18px 0 18px;
             flex-grow: 1;
             line-height: 1.8;
-            font-size: 1.1em;
+            font-size: 1.08em;
             color: #333;
             background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.95) 100%);
         }
-
         .message-content .greeting {
             font-weight: bold;
-            font-size: 1.3em;
-            margin-bottom: 15px;
+            font-size: 1.2em;
+            margin-bottom: 12px;
             color: #d81b60;
         }
-
         .message-content .main-text p {
-            margin-bottom: 15px;
+            margin-bottom: 13px;
             opacity: 0;
             animation: fadeInUp 0.8s ease-out forwards;
         }
-
         .message-content .main-text p:nth-child(1) { animation-delay: 0.2s; }
         .message-content .main-text p:nth-child(2) { animation-delay: 0.4s; }
-
+        .message-content .main-text p:nth-child(3) { animation-delay: 0.6s; }
         .decorative-element {
-            height: 40px;
-            margin: 10px 25px;
+            height: 32px;
+            margin: 8px 18px;
             background: linear-gradient(90deg, transparent, #ffb6c1, transparent);
             opacity: 0.5;
         }
-
         .closing-remarks {
-            padding: 20px 25px;
+            padding: 12px 18px 0 18px;
             text-align: right;
             font-style: italic;
             color: #555;
             animation: fadeIn 1s ease-out;
         }
-
         .closing-remarks .signature {
             font-weight: bold;
-            font-size: 1.4em;
+            font-size: 1.2em;
             color: #d81b60;
             animation: writeSignature 1.5s ease-out forwards;
         }
-
         .interactive-cta {
-            padding: 20px;
+            padding: 16px 0 8px 0;
             text-align: center;
         }
-
         .surprise-btn {
             background: linear-gradient(45deg, #ff8fab, #ff7096);
             color: white;
             border: none;
-            padding: 12px 25px;
-            border-radius: 25px;
-            font-size: 1.1em;
+            padding: 10px 22px;
+            border-radius: 22px;
+            font-size: 1em;
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 2px 5px rgba(0,0,0,0.15);
             -webkit-tap-highlight-color: transparent;
         }
-
         .surprise-btn:active {
             transform: scale(0.98);
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
-
         .footer-credit {
             text-align: center;
-            padding: 15px;
+            padding: 10px;
             font-size: 0.8em;
             color: #aaa;
             background-color: #f9f9f9;
         }
-
         .floating-hearts {
             position: fixed;
             top: 0;
@@ -828,477 +151,59 @@
             pointer-events: none;
             z-index: 1000;
         }
-
         .heart {
             position: absolute;
             font-size: 20px;
             animation: float 6s ease-in infinite;
             opacity: 0;
         }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes fadeInDown {
-            from { transform: translateY(-20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        @keyframes fadeInUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        @keyframes writeSignature {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-
-        @keyframes float {
-            0% { transform: translateY(100vh) scale(0); opacity: 0; }
-            50% { opacity: 0.8; }
-            100% { transform: translateY(-100px) scale(1); opacity: 0; }
-        }
-
-        /* 适配微信浏览器 */
-        ::-webkit-scrollbar {
-            display: none;
-        }
-    </style>
-</head>
-<body>
-    <div class="card-container">
-        <section class="hero-banner">
-            <h1>母亲节快乐</h1>
-            <p class="subtitle">To The World's Best Mom</p>
-        </section>
-
-        <section class="message-content">
-            <p class="greeting">亲爱的妈妈，</p>
-            <div class="main-text">
-                <p>在这个特别的日子里，我想对您说声感谢。感谢您无尽的爱、支持和鼓励。您是我生命中最温暖的阳光，是我永远的港湾。</p>
-                <p>愿时光温柔待您，愿您永远健康快乐，笑容灿烂如花！</p>
-            </div>
-        </section>
-
-        <div class="decorative-element"></div>
-
-        <section class="closing-remarks">
-            <p>爱您的，</p>
-            <p class="signature">李宣燃</p>
-        </section>
-
-        <section class="interactive-cta">
-            <button onclick="playMothersDayAnimation()" class="surprise-btn">点我查看惊喜！</button>
-        </section>
-
-        <footer class="footer-credit">
-            <p>用爱制作 ❤️ 2025</p>
-        </footer>
-    </div>
-
-    <div class="floating-hearts" id="floating-hearts"></div>
-
-    <script>
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.className = 'heart';
-            heart.innerHTML = '❤️';
-            heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
-            return heart;
-        }
-
-        function playMothersDayAnimation() {
-            const container = document.getElementById('floating-hearts');
-            const button = document.querySelector('.surprise-btn');
-            
-            // 创建多个心形
-            for (let i = 0; i < 20; i++) {
-                const heart = createHeart();
-                container.appendChild(heart);
-                setTimeout(() => {
-                    heart.remove();
-                }, 6000);
-            }
-
-            // 更新按钮状态
-            button.textContent = '💖 已收到您的爱 💖';
-            button.disabled = true;
-            button.style.background = 'linear-gradient(45deg, #ffb6c1, #ffc0cb)';
-        }
-
-        // 页面加载时的动画
-        window.addEventListener('load', () => {
-            const elements = document.querySelectorAll('.message-content, .closing-remarks');
-            elements.forEach(el => {
-                el.style.opacity = '0';
-                setTimeout(() => {
-                    el.style.opacity = '1';
-                }, 500);
-            });
-        });
-    </script>
-</body>
-</html>
-    <style>
-        /* 新增顶部彩带动画 */
-        .ribbons {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 60px;
-            pointer-events: none;
-            z-index: 1001;
-        }
-        .ribbon {
-            position: absolute;
-            width: 60px;
-            height: 60px;
-            opacity: 0.7;
-            animation: swing 2.5s infinite ease-in-out;
-        }
-        .ribbon:nth-child(1) { left: 10%; animation-delay: 0s; }
-        .ribbon:nth-child(2) { left: 30%; animation-delay: 0.5s; }
-        .ribbon:nth-child(3) { left: 50%; animation-delay: 1s; }
-        .ribbon:nth-child(4) { left: 70%; animation-delay: 1.5s; }
-        .ribbon:nth-child(5) { left: 90%; animation-delay: 2s; }
-        @keyframes swing {
-            0% { transform: rotate(-10deg) translateY(0);}
-            50% { transform: rotate(10deg) translateY(10px);}
-            100% { transform: rotate(-10deg) translateY(0);}
-        }
-
-        /* 新增底部气球动画 */
         .balloons {
             position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 120px;
+            height: 100px;
             pointer-events: none;
             z-index: 1001;
         }
         .balloon {
             position: absolute;
-            bottom: -80px;
-            font-size: 2.5em;
-            opacity: 0.8;
+            bottom: -60px;
+            font-size: 2.2em;
+            opacity: 0.85;
             animation: fly 6s linear infinite;
         }
-        .balloon:nth-child(1) { left: 15%; animation-delay: 0s; }
-        .balloon:nth-child(2) { left: 35%; animation-delay: 1s; }
+        .balloon:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .balloon:nth-child(2) { left: 30%; animation-delay: 1s; }
         .balloon:nth-child(3) { left: 55%; animation-delay: 2s; }
         .balloon:nth-child(4) { left: 75%; animation-delay: 3s; }
-        .balloon:nth-child(5) { left: 85%; animation-delay: 4s; }
-        @keyframes fly {
-            0% { transform: translateY(0) scale(1);}
-            80% { opacity: 1;}
-            100% { transform: translateY(-180px) scale(1.1); opacity: 0;}
-        }
-        /* 祝福语动画 */
-        .blessings {
-            margin: 20px 0 10px 0;
-            text-align: center;
-            color: #e91e63;
-            font-size: 1.15em;
-            font-weight: bold;
-            letter-spacing: 1px;
-            animation: fadeIn 2s;
-        }
-        .blessings span {
-            display: inline-block;
-            margin: 0 8px;
-            animation: fadeInUp 1.2s;
-        }
-        .blessings span:nth-child(2) { animation-delay: 0.3s;}
-        .blessings span:nth-child(3) { animation-delay: 0.6s;}
-        .blessings span:nth-child(4) { animation-delay: 0.9s;}
-        .blessings span:nth-child(5) { animation-delay: 1.2s;}
-        .blessings span:nth-child(6) { animation-delay: 1.5s;}
-    </style>
-</head>
-<body>
-    <!-- 顶部彩带动画 -->
-    <div class="ribbons">
-        <img class="ribbon" src="https://cdn.jsdelivr.net/gh/USBgz/xiaoxiao/assets/ribbon1.png" />
-        <img class="ribbon" src="https://cdn.jsdelivr.net/gh/USBgz/xiaoxiao/assets/ribbon2.png" />
-        <img class="ribbon" src="https://cdn.jsdelivr.net/gh/USBgz/xiaoxiao/assets/ribbon3.png" />
-        <img class="ribbon" src="https://cdn.jsdelivr.net/gh/USBgz/xiaoxiao/assets/ribbon4.png" />
-        <img class="ribbon" src="https://cdn.jsdelivr.net/gh/USBgz/xiaoxiao/assets/ribbon5.png" />
-    </div>
-    <div class="card-container">
-        <section class="hero-banner">
-            <h1>母亲节快乐</h1>
-            <p class="subtitle">To The World's Best Mom</p>
-        </section>
-
-        <!-- 新增祝福语 -->
-        <div class="blessings">
-            <span>愿妈妈永远健康美丽</span>
-            <span>幸福常伴身旁</span>
-            <span>笑口常开</span>
-            <span>心想事成</span>
-            <span>岁岁平安</span>
-            <span>母爱如春晖，温暖一生</span>
-        </div>
-
-        <section class="message-content">
-            <p class="greeting">亲爱的妈妈，</p>
-            <div class="main-text">
-                <p>在这个特别的日子里，我想对您说声感谢。感谢您无尽的爱、支持和鼓励。您是我生命中最温暖的阳光，是我永远的港湾。</p>
-                <p>愿时光温柔待您，愿您永远健康快乐，笑容灿烂如花！</p>
-                <p>无论我走多远，心中最柔软的地方永远属于您。祝妈妈节日快乐，天天开心！</p>
-            </div>
-        </section>
-
-        <div class="decorative-element"></div>
-
-        <section class="closing-remarks">
-            <p>爱您的，</p>
-            <p class="signature">李宣燃</p>
-        </section>
-
-        <section class="interactive-cta">
-            <button onclick="playMothersDayAnimation()" class="surprise-btn">点我查看惊喜！</button>
-        </section>
-
-        <footer class="footer-credit">
-            <p>用爱制作 ❤️ 2025</p>
-        </footer>
-    </div>
-    <!-- 底部气球动画（用emoji代替图片） -->
-    <div class="balloons">
-        <span class="balloon">🎈</span>
-        <span class="balloon">🎉</span>
-        <span class="balloon">🎈</span>
-        <span class="balloon">🎊</span>
-        <span class="balloon">🎈</span>
-    </div>
-    <div class="floating-hearts" id="floating-hearts"></div>
-
-    <script>
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.className = 'heart';
-            heart.innerHTML = '❤️';
-            heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
-            return heart;
-        }
-
-        function playMothersDayAnimation() {
-            const container = document.getElementById('floating-hearts');
-            const button = document.querySelector('.surprise-btn');
-            
-            // 创建多个心形
-            for (let i = 0; i < 20; i++) {
-                const heart = createHeart();
-                container.appendChild(heart);
-                setTimeout(() => {
-                    heart.remove();
-                }, 6000);
-            }
-
-            // 更新按钮状态
-            button.textContent = '💖 已收到您的爱 💖';
-            button.disabled = true;
-            button.style.background = 'linear-gradient(45deg, #ffb6c1, #ffc0cb)';
-        }
-
-        // 页面加载时的动画
-        window.addEventListener('load', () => {
-            const elements = document.querySelectorAll('.message-content, .closing-remarks');
-            elements.forEach(el => {
-                el.style.opacity = '0';
-                setTimeout(() => {
-                    el.style.opacity = '1';
-                }, 500);
-            });
-        });
-    </script>
-</body>
-</html>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background: linear-gradient(135deg, #ffe5e5, #fff0f5);
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .card-container {
-            width: 100%;
-            max-width: 750rpx;
-            min-height: 100vh;
-            background-color: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border-radius: 40rpx;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            margin: 20px auto;
-        }
-
-        .hero-banner {
-            min-height: 300px;
-            background: linear-gradient(rgba(255, 182, 193, 0.3), rgba(255, 182, 193, 0.1));
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: #d81b60;
-            text-align: center;
-            padding: 40px;
-        }
-
-        .hero-banner h1 {
-            margin: 0;
-            font-size: 2.5em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-            animation: fadeInDown 1s ease-out;
-        }
-
-        .hero-banner .subtitle {
-            font-size: 1.2em;
-            margin-top: 10px;
-            color: #e91e63;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .message-content {
-            padding: 25px;
-            flex-grow: 1;
-            line-height: 1.8;
-            font-size: 1.1em;
-            color: #333;
-            background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.95) 100%);
-        }
-
-        .message-content .greeting {
-            font-weight: bold;
-            font-size: 1.3em;
-            margin-bottom: 15px;
-            color: #d81b60;
-        }
-
-        .message-content .main-text p {
-            margin-bottom: 15px;
-            opacity: 0;
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-
-        .message-content .main-text p:nth-child(1) { animation-delay: 0.2s; }
-        .message-content .main-text p:nth-child(2) { animation-delay: 0.4s; }
-
-        .decorative-element {
-            height: 40px;
-            margin: 10px 25px;
-            background: linear-gradient(90deg, transparent, #ffb6c1, transparent);
-            opacity: 0.5;
-        }
-
-        .closing-remarks {
-            padding: 20px 25px;
-            text-align: right;
-            font-style: italic;
-            color: #555;
-            animation: fadeIn 1s ease-out;
-        }
-
-        .closing-remarks .signature {
-            font-weight: bold;
-            font-size: 1.4em;
-            color: #d81b60;
-            animation: writeSignature 1.5s ease-out forwards;
-        }
-
-        .interactive-cta {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .surprise-btn {
-            background: linear-gradient(45deg, #ff8fab, #ff7096);
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 25px;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        .surprise-btn:active {
-            transform: scale(0.98);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-
-        .footer-credit {
-            text-align: center;
-            padding: 15px;
-            font-size: 0.8em;
-            color: #aaa;
-            background-color: #f9f9f9;
-        }
-
-        .floating-hearts {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1000;
-        }
-
-        .heart {
-            position: absolute;
-            font-size: 20px;
-            animation: float 6s ease-in infinite;
-            opacity: 0;
-        }
-
+        .balloon:nth-child(5) { left: 88%; animation-delay: 4s; }
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-
         @keyframes fadeInDown {
             from { transform: translateY(-20px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
-
         @keyframes fadeInUp {
             from { transform: translateY(20px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
-
         @keyframes writeSignature {
             from { width: 0; }
             to { width: 100%; }
         }
-
         @keyframes float {
             0% { transform: translateY(100vh) scale(0); opacity: 0; }
             50% { opacity: 0.8; }
             100% { transform: translateY(-100px) scale(1); opacity: 0; }
         }
-
-        /* 适配微信浏览器 */
+        @keyframes fly {
+            0% { transform: translateY(0) scale(1);}
+            80% { opacity: 1;}
+            100% { transform: translateY(-120px) scale(1.1); opacity: 0;}
+        }
         ::-webkit-scrollbar {
             display: none;
         }
@@ -1310,169 +215,6 @@
             <h1>母亲节快乐</h1>
             <p class="subtitle">To The World's Best Mom</p>
         </section>
-
-        <section class="message-content">
-            <p class="greeting">亲爱的妈妈，</p>
-            <div class="main-text">
-                <p>在这个特别的日子里，我想对您说声感谢。感谢您无尽的爱、支持和鼓励。您是我生命中最温暖的阳光，是我永远的港湾。</p>
-                <p>愿时光温柔待您，愿您永远健康快乐，笑容灿烂如花！</p>
-            </div>
-        </section>
-
-        <div class="decorative-element"></div>
-
-        <section class="closing-remarks">
-            <p>爱您的，</p>
-            <p class="signature">李宣燃</p>
-        </section>
-
-        <section class="interactive-cta">
-            <button onclick="playMothersDayAnimation()" class="surprise-btn">点我查看惊喜！</button>
-        </section>
-
-        <footer class="footer-credit">
-            <p>用爱制作 ❤️ 2025</p>
-        </footer>
-    </div>
-
-    <div class="floating-hearts" id="floating-hearts"></div>
-
-    <script>
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.className = 'heart';
-            heart.innerHTML = '❤️';
-            heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
-            return heart;
-        }
-
-        function playMothersDayAnimation() {
-            const container = document.getElementById('floating-hearts');
-            const button = document.querySelector('.surprise-btn');
-            
-            // 创建多个心形
-            for (let i = 0; i < 20; i++) {
-                const heart = createHeart();
-                container.appendChild(heart);
-                setTimeout(() => {
-                    heart.remove();
-                }, 6000);
-            }
-
-            // 更新按钮状态
-            button.textContent = '💖 已收到您的爱 💖';
-            button.disabled = true;
-            button.style.background = 'linear-gradient(45deg, #ffb6c1, #ffc0cb)';
-        }
-
-        // 页面加载时的动画
-        window.addEventListener('load', () => {
-            const elements = document.querySelectorAll('.message-content, .closing-remarks');
-            elements.forEach(el => {
-                el.style.opacity = '0';
-                setTimeout(() => {
-                    el.style.opacity = '1';
-                }, 500);
-            });
-        });
-    </script>
-</body>
-</html>
-    <style>
-        /* 新增顶部彩带动画 */
-        .ribbons {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 60px;
-            pointer-events: none;
-            z-index: 1001;
-        }
-        .ribbon {
-            position: absolute;
-            width: 60px;
-            height: 60px;
-            opacity: 0.7;
-            animation: swing 2.5s infinite ease-in-out;
-        }
-        .ribbon:nth-child(1) { left: 10%; animation-delay: 0s; }
-        .ribbon:nth-child(2) { left: 30%; animation-delay: 0.5s; }
-        .ribbon:nth-child(3) { left: 50%; animation-delay: 1s; }
-        .ribbon:nth-child(4) { left: 70%; animation-delay: 1.5s; }
-        .ribbon:nth-child(5) { left: 90%; animation-delay: 2s; }
-        @keyframes swing {
-            0% { transform: rotate(-10deg) translateY(0);}
-            50% { transform: rotate(10deg) translateY(10px);}
-            100% { transform: rotate(-10deg) translateY(0);}
-        }
-
-        /* 新增底部气球动画 */
-        .balloons {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 120px;
-            pointer-events: none;
-            z-index: 1001;
-        }
-        .balloon {
-            position: absolute;
-            bottom: -80px;
-            font-size: 2.5em;
-            opacity: 0.8;
-            animation: fly 6s linear infinite;
-        }
-        .balloon:nth-child(1) { left: 15%; animation-delay: 0s; }
-        .balloon:nth-child(2) { left: 35%; animation-delay: 1s; }
-        .balloon:nth-child(3) { left: 55%; animation-delay: 2s; }
-        .balloon:nth-child(4) { left: 75%; animation-delay: 3s; }
-        .balloon:nth-child(5) { left: 85%; animation-delay: 4s; }
-        @keyframes fly {
-            0% { transform: translateY(0) scale(1);}
-            80% { opacity: 1;}
-            100% { transform: translateY(-180px) scale(1.1); opacity: 0;}
-        }
-        /* 祝福语动画 */
-        .blessings {
-            margin: 20px 0 10px 0;
-            text-align: center;
-            color: #e91e63;
-            font-size: 1.15em;
-            font-weight: bold;
-            letter-spacing: 1px;
-            animation: fadeIn 2s;
-        }
-        .blessings span {
-            display: inline-block;
-            margin: 0 8px;
-            animation: fadeInUp 1.2s;
-        }
-        .blessings span:nth-child(2) { animation-delay: 0.3s;}
-        .blessings span:nth-child(3) { animation-delay: 0.6s;}
-        .blessings span:nth-child(4) { animation-delay: 0.9s;}
-        .blessings span:nth-child(5) { animation-delay: 1.2s;}
-        .blessings span:nth-child(6) { animation-delay: 1.5s;}
-    </style>
-</head>
-<body>
-    <!-- 顶部彩带动画 -->
-    <div class="ribbons">
-        <img class="ribbon" src="https://cdn.jsdelivr.net/gh/USBgz/xiaoxiao/assets/ribbon1.png" />
-        <img class="ribbon" src="https://cdn.jsdelivr.net/gh/USBgz/xiaoxiao/assets/ribbon2.png" />
-        <img class="ribbon" src="https://cdn.jsdelivr.net/gh/USBgz/xiaoxiao/assets/ribbon3.png" />
-        <img class="ribbon" src="https://cdn.jsdelivr.net/gh/USBgz/xiaoxiao/assets/ribbon4.png" />
-        <img class="ribbon" src="https://cdn.jsdelivr.net/gh/USBgz/xiaoxiao/assets/ribbon5.png" />
-    </div>
-    <div class="card-container">
-        <section class="hero-banner">
-            <h1>母亲节快乐</h1>
-            <p class="subtitle">To The World's Best Mom</p>
-        </section>
-
-        <!-- 新增祝福语 -->
         <div class="blessings">
             <span>愿妈妈永远健康美丽</span>
             <span>幸福常伴身旁</span>
@@ -1481,7 +223,6 @@
             <span>岁岁平安</span>
             <span>母爱如春晖，温暖一生</span>
         </div>
-
         <section class="message-content">
             <p class="greeting">亲爱的妈妈，</p>
             <div class="main-text">
@@ -1490,23 +231,19 @@
                 <p>无论我走多远，心中最柔软的地方永远属于您。祝妈妈节日快乐，天天开心！</p>
             </div>
         </section>
-
         <div class="decorative-element"></div>
-
         <section class="closing-remarks">
             <p>爱您的，</p>
-            <p class="signature">李宣燃</p>
+            <p class="signature">宣宣</p>
         </section>
-
         <section class="interactive-cta">
             <button onclick="playMothersDayAnimation()" class="surprise-btn">点我查看惊喜！</button>
         </section>
-
         <footer class="footer-credit">
             <p>用爱制作 ❤️ 2025</p>
         </footer>
     </div>
-    <!-- 底部气球动画（用emoji代替图片） -->
+    <!-- 底部气球动画（emoji） -->
     <div class="balloons">
         <span class="balloon">🎈</span>
         <span class="balloon">🎉</span>
@@ -1515,7 +252,6 @@
         <span class="balloon">🎈</span>
     </div>
     <div class="floating-hearts" id="floating-hearts"></div>
-
     <script>
         function createHeart() {
             const heart = document.createElement('div');
@@ -1525,12 +261,9 @@
             heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
             return heart;
         }
-
         function playMothersDayAnimation() {
             const container = document.getElementById('floating-hearts');
             const button = document.querySelector('.surprise-btn');
-            
-            // 创建多个心形
             for (let i = 0; i < 20; i++) {
                 const heart = createHeart();
                 container.appendChild(heart);
@@ -1538,14 +271,10 @@
                     heart.remove();
                 }, 6000);
             }
-
-            // 更新按钮状态
             button.textContent = '💖 已收到您的爱 💖';
             button.disabled = true;
             button.style.background = 'linear-gradient(45deg, #ffb6c1, #ffc0cb)';
         }
-
-        // 页面加载时的动画
         window.addEventListener('load', () => {
             const elements = document.querySelectorAll('.message-content, .closing-remarks');
             elements.forEach(el => {
@@ -1558,281 +287,3 @@
     </script>
 </body>
 </html>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background: linear-gradient(135deg, #ffe5e5, #fff0f5);
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .card-container {
-            width: 100%;
-            max-width: 750rpx;
-            min-height: 100vh;
-            background-color: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border-radius: 40rpx;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            margin: 20px auto;
-        }
-
-        .hero-banner {
-            min-height: 300px;
-            background: linear-gradient(rgba(255, 182, 193, 0.3), rgba(255, 182, 193, 0.1));
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: #d81b60;
-            text-align: center;
-            padding: 40px;
-        }
-
-        .hero-banner h1 {
-            margin: 0;
-            font-size: 2.5em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-            animation: fadeInDown 1s ease-out;
-        }
-
-        .hero-banner .subtitle {
-            font-size: 1.2em;
-            margin-top: 10px;
-            color: #e91e63;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .message-content {
-            padding: 25px;
-            flex-grow: 1;
-            line-height: 1.8;
-            font-size: 1.1em;
-            color: #333;
-            background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.95) 100%);
-        }
-
-        .message-content .greeting {
-            font-weight: bold;
-            font-size: 1.3em;
-            margin-bottom: 15px;
-            color: #d81b60;
-        }
-
-        .message-content .main-text p {
-            margin-bottom: 15px;
-            opacity: 0;
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-
-        .message-content .main-text p:nth-child(1) { animation-delay: 0.2s; }
-        .message-content .main-text p:nth-child(2) { animation-delay: 0.4s; }
-
-        .decorative-element {
-            height: 40px;
-            margin: 10px 25px;
-            background: linear-gradient(90deg, transparent, #ffb6c1, transparent);
-            opacity: 0.5;
-        }
-
-        .closing-remarks {
-            padding: 20px 25px;
-            text-align: right;
-            font-style: italic;
-            color: #555;
-            animation: fadeIn 1s ease-out;
-        }
-
-        .closing-remarks .signature {
-            font-weight: bold;
-            font-size: 1.4em;
-            color: #d81b60;
-            animation: writeSignature 1.5s ease-out forwards;
-        }
-
-        .interactive-cta {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .surprise-btn {
-            background: linear-gradient(45deg, #ff8fab, #ff7096);
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 25px;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        .surprise-btn:active {
-            transform: scale(0.98);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-
-        .footer-credit {
-            text-align: center;
-            padding: 15px;
-            font-size: 0.8em;
-            color: #aaa;
-            background-color: #f9f9f9;
-        }
-
-        .floating-hearts {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1000;
-        }
-
-        .heart {
-            position: absolute;
-            font-size: 20px;
-            animation: float 6s ease-in infinite;
-            opacity: 0;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes fadeInDown {
-            from { transform: translateY(-20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        @keyframes fadeInUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        @keyframes writeSignature {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-
-        @keyframes float {
-            0% { transform: translateY(100vh) scale(0); opacity: 0; }
-            50% { opacity: 0.8; }
-            100% { transform: translateY(-100px) scale(1); opacity: 0; }
-        }
-
-        /* 适配微信浏览器 */
-        ::-webkit-scrollbar {
-            display: none;
-        }
-    </style>
-</head>
-<body>
-    <div class="card-container">
-        <section class="hero-banner">
-            <h1>母亲节快乐</h1>
-            <p class="subtitle">To The World's Best Mom</p>
-        </section>
-
-        <section class="message-content">
-            <p class="greeting">亲爱的妈妈，</p>
-            <div class="main-text">
-                <p>在这个特别的日子里，我想对您说声感谢。感谢您无尽的爱、支持和鼓励。您是我生命中最温暖的阳光，是我永远的港湾。</p>
-                <p>愿时光温柔待您，愿您永远健康快乐，笑容灿烂如花！</p>
-            </div>
-        </section>
-
-        <div class="decorative-element"></div>
-
-        <section class="closing-remarks">
-            <p>爱您的，</p>
-            <p class="signature">李宣燃</p>
-        </section>
-
-        <section class="interactive-cta">
-            <button onclick="playMothersDayAnimation()" class="surprise-btn">点我查看惊喜！</button>
-        </section>
-
-        <footer class="footer-credit">
-            <p>用爱制作 ❤️ 2025</p>
-        </footer>
-    </div>
-
-    <div class="floating-hearts" id="floating-hearts"></div>
-
-    <script>
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.className = 'heart';
-            heart.innerHTML = '❤️';
-            heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
-            return heart;
-        }
-
-        function playMothersDayAnimation() {
-            const container = document.getElementById('floating-hearts');
-            const button = document.querySelector('.surprise-btn');
-            
-            // 创建多个心形
-            for (let i = 0; i < 20; i++) {
-                const heart = createHeart();
-                container.appendChild(heart);
-                setTimeout(() => {
-                    heart.remove();
-                }, 6000);
-            }
-
-            // 更新按钮状态
-            button.textContent = '💖 已收到您的爱 💖';
-            button.disabled = true;
-            button.style.background = 'linear-gradient(45deg, #ffb6c1, #ffc0cb)';
-        }
-
-        // 页面加载时的动画
-        window.addEventListener('load', () => {
-            const elements = document.querySelectorAll('.message-content, .closing-remarks');
-            elements.forEach(el => {
-                el.style.opacity = '0';
-                setTimeout(() => {
-                    el.style.opacity = '1';
-                }, 500);
-            });
-        });
-    </script>
-</body>
-</html>
-    <style>
-        /* 新增顶部彩带动画 */
-        .ribbons {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 60px;
-            pointer-events: none;
-            z-index: 1001;
-        }
-        .ribbon {
-            position: absolute;
-            width: 60px;
-            height: 60px;
-            opacity: 0.7;
-            animation: swing 2.5s infinite ease-in-out;
-        }
-        .ribbon:nth-child(1) { left: 10%; animation-delay: 0s; }
-        .ribbon:nth-child(2) { left: 30%; animation-delay: 0.5s; }
-        .ribbon:nth-child(3) { left: 50%; animation-delay: 1s; }
